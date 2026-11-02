@@ -1,0 +1,178 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Page-1" id="DnMyvNmV1fL-WepxgEsN">
+    <mxGraphModel dx="1362" dy="754" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <UserObject label="" mermaidData="{&#xa;  &quot;data&quot;: &quot;graph LR\n    Patient[Пациент]\n    Cashier[Кассир]\n    KKM[ККМ]\n    OneC[1С]\n\n    P_HandoverMoney((Передача денег/карты и подтверждение суммы))\n    P_Pay((Приём оплаты и печать чека))\n    P_Process((Валидация, маскирование, учёт))\n    P_Report((Формирование отчёта))\n    P_Log((Фиксация транзакции в журнале))\n    P_ReadReport((Чтение и проверка отчёта кассиром))\n    P_IssueReceipt((Выдача чека под подпись))\n\n    S7[Отчёты]\n    S8[Журнал аудита]\n\n    Patient --&gt;|Пришёл платить| P_HandoverMoney\n    P_HandoverMoney --&gt;|Деньги/карта, сумма| Cashier\n    Cashier --&gt;|Инициация оплаты| P_Pay\n    P_Pay --&gt;|Фискальные данные| KKM\n    KKM --&gt;|Чек и данные| P_Process\n    P_Process --&gt;|Данные платежа| OneC\n    P_Process --&gt;|Маскированные данные| OneC\n    P_Process --&gt;|Данные для логирования| P_Log\n    P_Log --&gt;|Запись в журнал| S8\n    P_Process --&gt;|Данные для отчёта| P_Report\n    P_Report --&gt;|Отчёт| S7\n    S7 --&gt;|Данные отчёта| P_ReadReport\n    P_ReadReport --&gt;|Просмотр отчёта| Cashier\n    P_Pay --&gt;|Чек для выдачи| P_IssueReceipt\n    P_IssueReceipt --&gt;|Выдача чека под подпись| Patient\n&quot;,&#xa;  &quot;config&quot;: null,&#xa;  &quot;version&quot;: &quot;12&quot;&#xa;}" id="lfhS4eNURWnVR5gMlrJm-868">
+          <mxCell connectable="0" parent="1" style="group;transparentBounds=1;editIcon=1;lockedGroup=0;groupPadding=10;" vertex="1">
+            <mxGeometry as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Пациент" mermaidId="n:Patient" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=2;fillColor=#ffffff;strokeColor=#28253D;fontColor=#28253D;fontFamily=Recursive;fontSize=14;shadow=1;shadowColor=#000000;shadowOffsetX=4;shadowOffsetY=4;shadowBlur=0;shadowOpacity=6;" mermaidBaseValue="Пациент" id="lfhS4eNURWnVR5gMlrJm-869">
+          <mxCell parent="lfhS4eNURWnVR5gMlrJm-868" style="html=1;whiteSpace=wrap;strokeWidth=2;fillColor=#ffffff;strokeColor=#28253D;fontColor=#28253D;fontFamily=Recursive;fontSize=14;shadow=1;shadowColor=#000000;shadowOffsetX=4;shadowOffsetY=4;shadowBlur=0;shadowOpacity=6;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DRecursive;rounded=0;" vertex="1">
+            <mxGeometry height="45" width="152" x="840" y="839" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Кассир" mermaidId="n:Cashier" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=2;fillColor=#ffffff;strokeColor=#28253D;fontColor=#28253D;fontFamily=Recursive;fontSize=14;shadow=1;shadowColor=#000000;shadowOffsetX=4;shadowOffsetY=4;shadowBlur=0;shadowOpacity=6;" mermaidBaseValue="Кассир" id="lfhS4eNURWnVR5gMlrJm-870">
+          <mxCell parent="lfhS4eNURWnVR5gMlrJm-868" style="html=1;whiteSpace=wrap;strokeWidth=2;fillColor=#ffffff;strokeColor=#28253D;fontColor=#28253D;fontFamily=Recursive;fontSize=14;shadow=1;shadowColor=#000000;shadowOffsetX=4;shadowOffsetY=4;shadowBlur=0;shadowOpacity=6;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DRecursive;rounded=0;" vertex="1">
+            <mxGeometry height="45" width="152" x="1633" y="766" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="ККМ" mermaidId="n:KKM" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=2;fillColor=#ffffff;strokeColor=#28253D;fontColor=#28253D;fontFamily=Recursive;fontSize=14;shadow=1;shadowColor=#000000;shadowOffsetX=4;shadowOffsetY=4;shadowBlur=0;shadowOpacity=6;" mermaidBaseValue="ККМ" id="lfhS4eNURWnVR5gMlrJm-871">
+          <mxCell parent="lfhS4eNURWnVR5gMlrJm-868" style="html=1;whiteSpace=wrap;strokeWidth=2;fillColor=#ffffff;strokeColor=#28253D;fontColor=#28253D;fontFamily=Recursive;fontSize=14;shadow=1;shadowColor=#000000;shadowOffsetX=4;shadowOffsetY=4;shadowBlur=0;shadowOpacity=6;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DRecursive;" vertex="1">
+            <mxGeometry height="45" width="152" x="2446" y="577" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="6Mh2_Y-RtLDqBvOx-S_i-4" edge="1" parent="lfhS4eNURWnVR5gMlrJm-868" source="lfhS4eNURWnVR5gMlrJm-872" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;defaultLabelBackgroundColor=page;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="3470" y="503" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <UserObject label="1С" mermaidId="n:OneC" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=2;fillColor=#ffffff;strokeColor=#28253D;fontColor=#28253D;fontFamily=Recursive;fontSize=14;shadow=1;shadowColor=#000000;shadowOffsetX=4;shadowOffsetY=4;shadowBlur=0;shadowOpacity=6;" mermaidBaseValue="1С" id="lfhS4eNURWnVR5gMlrJm-872">
+          <mxCell parent="lfhS4eNURWnVR5gMlrJm-868" style="html=1;whiteSpace=wrap;strokeWidth=2;fillColor=#ffffff;strokeColor=#28253D;fontColor=#28253D;fontFamily=Recursive;fontSize=14;shadow=1;shadowColor=#000000;shadowOffsetX=4;shadowOffsetY=4;shadowBlur=0;shadowOpacity=6;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DRecursive;" vertex="1">
+            <mxGeometry height="45" width="152" x="3259" y="480" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Передача денег/карты и подтверждение суммы" mermaidId="n:P_HandoverMoney" mermaidBaseStyle="ellipse;html=1;aspect=fixed;strokeWidth=2;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#28253D;fontColor=#28253D;fontFamily=Recursive;fontSize=14;shadow=1;shadowColor=#000000;shadowOffsetX=4;shadowOffsetY=4;shadowBlur=0;shadowOpacity=6;" mermaidBaseValue="Передача денег/карты и подтверждение суммы" id="lfhS4eNURWnVR5gMlrJm-873">
+          <mxCell parent="lfhS4eNURWnVR5gMlrJm-868" style="ellipse;html=1;aspect=fixed;strokeWidth=2;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#28253D;fontColor=#28253D;fontFamily=Recursive;fontSize=14;shadow=1;shadowColor=#000000;shadowOffsetX=4;shadowOffsetY=4;shadowBlur=0;shadowOpacity=6;labelWidth=120;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DRecursive;" vertex="1">
+            <mxGeometry height="184" width="184" x="1194" y="697" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Приём оплаты и печать чека" mermaidId="n:P_Pay" mermaidBaseStyle="ellipse;html=1;aspect=fixed;strokeWidth=2;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#28253D;fontColor=#28253D;fontFamily=Recursive;fontSize=14;shadow=1;shadowColor=#000000;shadowOffsetX=4;shadowOffsetY=4;shadowBlur=0;shadowOpacity=6;" mermaidBaseValue="Приём оплаты и печать чека" id="lfhS4eNURWnVR5gMlrJm-874">
+          <mxCell parent="lfhS4eNURWnVR5gMlrJm-868" style="ellipse;html=1;aspect=fixed;strokeWidth=2;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#28253D;fontColor=#28253D;fontFamily=Recursive;fontSize=14;shadow=1;shadowColor=#000000;shadowOffsetX=4;shadowOffsetY=4;shadowBlur=0;shadowOpacity=6;labelWidth=120;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DRecursive;" vertex="1">
+            <mxGeometry height="184" width="184" x="2018" y="641" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Валидация, маскирование, учёт" mermaidId="n:P_Process" mermaidBaseStyle="ellipse;html=1;aspect=fixed;strokeWidth=2;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#28253D;fontColor=#28253D;fontFamily=Recursive;fontSize=14;shadow=1;shadowColor=#000000;shadowOffsetX=4;shadowOffsetY=4;shadowBlur=0;shadowOpacity=6;" mermaidBaseValue="Валидация, маскирование, учёт" id="lfhS4eNURWnVR5gMlrJm-875">
+          <mxCell parent="lfhS4eNURWnVR5gMlrJm-868" style="ellipse;html=1;aspect=fixed;strokeWidth=2;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#28253D;fontColor=#28253D;fontFamily=Recursive;fontSize=14;shadow=1;shadowColor=#000000;shadowOffsetX=4;shadowOffsetY=4;shadowBlur=0;shadowOpacity=6;labelWidth=120;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DRecursive;" vertex="1">
+            <mxGeometry height="184" width="184" x="2793" y="507" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Фиксация транзакции в журнале" mermaidId="n:P_Log" mermaidBaseStyle="ellipse;html=1;aspect=fixed;strokeWidth=2;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#28253D;fontColor=#28253D;fontFamily=Recursive;fontSize=14;shadow=1;shadowColor=#000000;shadowOffsetX=4;shadowOffsetY=4;shadowBlur=0;shadowOpacity=6;" mermaidBaseValue="Фиксация транзакции в журнале" id="lfhS4eNURWnVR5gMlrJm-877">
+          <mxCell parent="lfhS4eNURWnVR5gMlrJm-868" style="ellipse;html=1;aspect=fixed;strokeWidth=2;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#28253D;fontColor=#28253D;fontFamily=Recursive;fontSize=14;shadow=1;shadowColor=#000000;shadowOffsetX=4;shadowOffsetY=4;shadowBlur=0;shadowOpacity=6;labelWidth=120;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DRecursive;" vertex="1">
+            <mxGeometry height="184" width="184" x="3259" y="566" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Выдача чека" mermaidId="n:P_IssueReceipt" mermaidBaseStyle="ellipse;html=1;aspect=fixed;strokeWidth=2;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#28253D;fontColor=#28253D;fontFamily=Recursive;fontSize=14;shadow=1;shadowColor=#000000;shadowOffsetX=4;shadowOffsetY=4;shadowBlur=0;shadowOpacity=6;" mermaidBaseValue="Выдача чека под подпись" id="lfhS4eNURWnVR5gMlrJm-879">
+          <mxCell parent="lfhS4eNURWnVR5gMlrJm-868" style="ellipse;html=1;aspect=fixed;strokeWidth=2;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#28253D;fontColor=#28253D;fontFamily=Recursive;fontSize=14;shadow=1;shadowColor=#000000;shadowOffsetX=4;shadowOffsetY=4;shadowBlur=0;shadowOpacity=6;labelWidth=120;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DRecursive;" vertex="1">
+            <mxGeometry height="184" width="184" x="2430" y="1015" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Пришёл платить" mermaidId="e:Patient-&gt;P_HandoverMoney#0" mermaidBaseStyle="edgeStyle=orthogonalEdgeStyle;rounded=1;curved=0;startArrow=none;endArrow=block;endSize=8;jumpStyle=arc;jumpSize=12;strokeColor=#000000;html=1;fontSize=16;labelBackgroundColor=#cccccc;fontFamily=Recursive;fontColor=#28253D;exitX=1;exitY=0.4;entryX=0;entryY=0.5;strokeWidth=2;targetPerimeterSpacing=4;" mermaidBaseValue="Пришёл платить" id="lfhS4eNURWnVR5gMlrJm-882">
+          <mxCell edge="1" parent="lfhS4eNURWnVR5gMlrJm-868" source="lfhS4eNURWnVR5gMlrJm-869" style="edgeStyle=orthogonalEdgeStyle;rounded=1;curved=0;startArrow=none;endArrow=block;endSize=8;jumpStyle=arc;jumpSize=12;strokeColor=#000000;html=1;fontSize=14;labelBackgroundColor=#cccccc;fontFamily=Recursive;fontColor=#28253D;exitX=1;exitY=0.4;entryX=0;entryY=0.5;strokeWidth=2;targetPerimeterSpacing=4;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DRecursive;" target="lfhS4eNURWnVR5gMlrJm-873">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points">
+                <mxPoint x="1012" y="857" />
+                <mxPoint x="1012" y="789" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="Деньги/карта, сумма" mermaidId="e:P_HandoverMoney-&gt;Cashier#0" mermaidBaseStyle="edgeStyle=orthogonalEdgeStyle;rounded=1;curved=0;startArrow=none;endArrow=block;endSize=8;jumpStyle=arc;jumpSize=12;strokeColor=#000000;html=1;fontSize=16;labelBackgroundColor=#cccccc;fontFamily=Recursive;fontColor=#28253D;exitX=1;exitY=0.5;entryX=0;entryY=0.51;strokeWidth=2;targetPerimeterSpacing=4;" mermaidBaseValue="Деньги/карта, сумма" id="lfhS4eNURWnVR5gMlrJm-883">
+          <mxCell edge="1" parent="lfhS4eNURWnVR5gMlrJm-868" source="lfhS4eNURWnVR5gMlrJm-873" style="edgeStyle=orthogonalEdgeStyle;rounded=1;curved=0;startArrow=none;endArrow=block;endSize=8;jumpStyle=arc;jumpSize=12;strokeColor=#000000;html=1;fontSize=14;labelBackgroundColor=#cccccc;fontFamily=Recursive;fontColor=#28253D;exitX=1;exitY=0.5;entryX=0;entryY=0.51;strokeWidth=2;targetPerimeterSpacing=4;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DRecursive;" target="lfhS4eNURWnVR5gMlrJm-870">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="Инициация оплаты" mermaidId="e:Cashier-&gt;P_Pay#0" mermaidBaseStyle="edgeStyle=orthogonalEdgeStyle;rounded=1;curved=0;startArrow=none;endArrow=block;endSize=8;jumpStyle=arc;jumpSize=12;strokeColor=#000000;html=1;fontSize=16;labelBackgroundColor=#cccccc;fontFamily=Recursive;fontColor=#28253D;exitX=1;exitY=0.42;entryX=0;entryY=0.5;strokeWidth=2;targetPerimeterSpacing=4;" mermaidBaseValue="Инициация оплаты" id="lfhS4eNURWnVR5gMlrJm-884">
+          <mxCell edge="1" parent="lfhS4eNURWnVR5gMlrJm-868" source="lfhS4eNURWnVR5gMlrJm-870" style="edgeStyle=orthogonalEdgeStyle;rounded=1;curved=0;startArrow=none;endArrow=block;endSize=8;jumpStyle=arc;jumpSize=12;strokeColor=#000000;html=1;fontSize=14;labelBackgroundColor=#cccccc;fontFamily=Recursive;fontColor=#28253D;exitX=1;exitY=0.42;entryX=0;entryY=0.5;strokeWidth=2;targetPerimeterSpacing=4;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DRecursive;" target="lfhS4eNURWnVR5gMlrJm-874">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points">
+                <mxPoint x="1816" y="785" />
+                <mxPoint x="1816" y="733" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="Фискальные данные" mermaidId="e:P_Pay-&gt;KKM#0" mermaidBaseStyle="edgeStyle=orthogonalEdgeStyle;rounded=1;curved=0;startArrow=none;endArrow=block;endSize=8;jumpStyle=arc;jumpSize=12;strokeColor=#000000;html=1;fontSize=16;labelBackgroundColor=#cccccc;fontFamily=Recursive;fontColor=#28253D;exitX=1;exitY=0.35;entryX=0;entryY=0.49;strokeWidth=2;targetPerimeterSpacing=4;" mermaidBaseValue="Фискальные данные" id="lfhS4eNURWnVR5gMlrJm-885">
+          <mxCell edge="1" parent="lfhS4eNURWnVR5gMlrJm-868" source="lfhS4eNURWnVR5gMlrJm-874" style="edgeStyle=orthogonalEdgeStyle;rounded=1;curved=0;startArrow=none;endArrow=block;endSize=8;jumpStyle=arc;jumpSize=12;strokeColor=#000000;html=1;fontSize=14;labelBackgroundColor=#cccccc;fontFamily=Recursive;fontColor=#28253D;exitX=1;exitY=0.35;entryX=0;entryY=0.49;strokeWidth=2;targetPerimeterSpacing=4;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DRecursive;" target="lfhS4eNURWnVR5gMlrJm-871">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points">
+                <mxPoint x="2222" y="706" />
+                <mxPoint x="2222" y="599" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="Чек и данные" mermaidId="e:KKM-&gt;P_Process#0" mermaidBaseStyle="edgeStyle=orthogonalEdgeStyle;rounded=1;curved=0;startArrow=none;endArrow=block;endSize=8;jumpStyle=arc;jumpSize=12;strokeColor=#000000;html=1;fontSize=16;labelBackgroundColor=#cccccc;fontFamily=Recursive;fontColor=#28253D;exitX=1;exitY=0.49;entryX=0;entryY=0.5;strokeWidth=2;targetPerimeterSpacing=4;" mermaidBaseValue="Чек и данные" id="lfhS4eNURWnVR5gMlrJm-886">
+          <mxCell edge="1" parent="lfhS4eNURWnVR5gMlrJm-868" source="lfhS4eNURWnVR5gMlrJm-871" style="edgeStyle=orthogonalEdgeStyle;rounded=1;curved=0;startArrow=none;endArrow=block;endSize=8;jumpStyle=arc;jumpSize=12;strokeColor=#000000;html=1;fontSize=14;labelBackgroundColor=#cccccc;fontFamily=Recursive;fontColor=#28253D;exitX=1;exitY=0.49;entryX=0;entryY=0.5;strokeWidth=2;targetPerimeterSpacing=4;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DRecursive;" target="lfhS4eNURWnVR5gMlrJm-875">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="Данные платежа" mermaidId="e:P_Process-&gt;OneC#0" mermaidBaseStyle="edgeStyle=orthogonalEdgeStyle;rounded=1;curved=0;startArrow=none;endArrow=block;endSize=8;jumpStyle=arc;jumpSize=12;strokeColor=#000000;html=1;fontSize=16;labelBackgroundColor=#cccccc;fontFamily=Recursive;fontColor=#28253D;exitX=1;exitY=0.23;entryX=0;entryY=0.42;strokeWidth=2;targetPerimeterSpacing=4;" mermaidBaseValue="Данные платежа" id="lfhS4eNURWnVR5gMlrJm-887">
+          <mxCell edge="1" parent="lfhS4eNURWnVR5gMlrJm-868" source="lfhS4eNURWnVR5gMlrJm-875" style="edgeStyle=orthogonalEdgeStyle;rounded=1;curved=0;startArrow=none;endArrow=block;endSize=8;jumpStyle=arc;jumpSize=12;strokeColor=#000000;html=1;fontSize=14;labelBackgroundColor=#cccccc;fontFamily=Recursive;fontColor=#28253D;exitX=1;exitY=0.23;entryX=0;entryY=0.42;strokeWidth=2;targetPerimeterSpacing=4;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DRecursive;" target="lfhS4eNURWnVR5gMlrJm-872">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points">
+                <mxPoint x="2966.2" y="550" />
+                <mxPoint x="2997" y="550" />
+                <mxPoint x="2997" y="498.9" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="Данные для логирования" mermaidId="e:P_Process-&gt;P_Log#0" mermaidBaseStyle="edgeStyle=orthogonalEdgeStyle;rounded=1;curved=0;startArrow=none;endArrow=block;endSize=8;jumpStyle=arc;jumpSize=12;strokeColor=#000000;html=1;fontSize=16;labelBackgroundColor=#cccccc;fontFamily=Recursive;fontColor=#28253D;exitX=1;exitY=0.59;entryX=0;entryY=0.5;strokeWidth=2;targetPerimeterSpacing=4;" mermaidBaseValue="Данные для логирования" id="lfhS4eNURWnVR5gMlrJm-889">
+          <mxCell edge="1" parent="lfhS4eNURWnVR5gMlrJm-868" source="lfhS4eNURWnVR5gMlrJm-875" style="edgeStyle=orthogonalEdgeStyle;rounded=1;curved=0;startArrow=none;endArrow=block;endSize=8;jumpStyle=arc;jumpSize=12;strokeColor=#000000;html=1;fontSize=14;labelBackgroundColor=#cccccc;fontFamily=Recursive;fontColor=#28253D;exitX=1;exitY=0.59;entryX=0;entryY=0.5;strokeWidth=2;targetPerimeterSpacing=4;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DRecursive;" target="lfhS4eNURWnVR5gMlrJm-877">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points">
+                <mxPoint x="3017" y="616" />
+                <mxPoint x="3017" y="658" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="Запись в журнал" mermaidId="e:P_Log-&gt;S8#0" mermaidBaseStyle="edgeStyle=orthogonalEdgeStyle;rounded=1;curved=0;startArrow=none;endArrow=block;endSize=8;jumpStyle=arc;jumpSize=12;strokeColor=#000000;html=1;fontSize=16;labelBackgroundColor=#cccccc;fontFamily=Recursive;fontColor=#28253D;exitX=1;exitY=0.5;entryX=0;entryY=0.5;strokeWidth=2;targetPerimeterSpacing=4;" mermaidBaseValue="Запись в журнал" id="lfhS4eNURWnVR5gMlrJm-890">
+          <mxCell edge="1" parent="lfhS4eNURWnVR5gMlrJm-868" source="lfhS4eNURWnVR5gMlrJm-877" style="edgeStyle=orthogonalEdgeStyle;rounded=1;curved=0;startArrow=none;endArrow=block;endSize=8;jumpStyle=arc;jumpSize=12;strokeColor=#000000;html=1;fontSize=14;labelBackgroundColor=#cccccc;fontFamily=Recursive;fontColor=#28253D;exitX=1;exitY=0.5;entryX=0;entryY=0.5;strokeWidth=2;targetPerimeterSpacing=4;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DRecursive;">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points" />
+              <mxPoint x="3645" y="657.5" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="Чек для выдачи" mermaidId="e:P_Pay-&gt;P_IssueReceipt#0" mermaidBaseStyle="edgeStyle=orthogonalEdgeStyle;rounded=1;curved=0;startArrow=none;endArrow=block;endSize=8;jumpStyle=arc;jumpSize=12;strokeColor=#000000;html=1;fontSize=16;labelBackgroundColor=#cccccc;fontFamily=Recursive;fontColor=#28253D;exitX=1;exitY=0.65;entryX=0;entryY=0.35;strokeWidth=2;targetPerimeterSpacing=4;" mermaidBaseValue="Чек для выдачи" id="lfhS4eNURWnVR5gMlrJm-895">
+          <mxCell edge="1" parent="lfhS4eNURWnVR5gMlrJm-868" source="lfhS4eNURWnVR5gMlrJm-874" style="edgeStyle=orthogonalEdgeStyle;rounded=1;curved=0;startArrow=none;endArrow=block;endSize=8;jumpStyle=arc;jumpSize=12;strokeColor=#000000;html=1;fontSize=14;labelBackgroundColor=#cccccc;fontFamily=Recursive;fontColor=#28253D;exitX=1;exitY=0.65;entryX=0;entryY=0.35;strokeWidth=2;targetPerimeterSpacing=4;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DRecursive;" target="lfhS4eNURWnVR5gMlrJm-879">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points">
+                <mxPoint x="2410" y="760" />
+                <mxPoint x="2410" y="1079" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="Выдача чека" mermaidId="e:P_IssueReceipt-&gt;Patient#0" mermaidBaseStyle="edgeStyle=orthogonalEdgeStyle;rounded=1;curved=0;startArrow=none;endArrow=block;endSize=8;jumpStyle=arc;jumpSize=12;strokeColor=#000000;html=1;fontSize=16;labelBackgroundColor=#cccccc;fontFamily=Recursive;fontColor=#28253D;exitX=0;exitY=0.65;entryX=1;entryY=0.59;strokeWidth=2;targetPerimeterSpacing=4;" mermaidBaseValue="Выдача чека под подпись" id="lfhS4eNURWnVR5gMlrJm-896">
+          <mxCell edge="1" parent="lfhS4eNURWnVR5gMlrJm-868" source="lfhS4eNURWnVR5gMlrJm-879" style="edgeStyle=orthogonalEdgeStyle;rounded=1;curved=0;startArrow=none;endArrow=block;endSize=8;jumpStyle=arc;jumpSize=12;strokeColor=#000000;html=1;fontSize=14;labelBackgroundColor=#cccccc;fontFamily=Recursive;fontColor=#28253D;exitX=0;exitY=0.65;entryX=1;entryY=0.59;strokeWidth=2;targetPerimeterSpacing=4;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DRecursive;" target="lfhS4eNURWnVR5gMlrJm-869">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points">
+                <mxPoint x="2316" y="1134" />
+                <mxPoint x="2110" y="1134" />
+                <mxPoint x="1907" y="1134" />
+                <mxPoint x="1495" y="1134" />
+                <mxPoint x="1286" y="1134" />
+                <mxPoint x="1093" y="1134" />
+                <mxPoint x="1012" y="1134" />
+                <mxPoint x="1012" y="866" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <mxCell id="6Mh2_Y-RtLDqBvOx-S_i-1" parent="lfhS4eNURWnVR5gMlrJm-868" style="html=1;dashed=0;whiteSpace=wrap;shape=mxgraph.dfd.dataStoreID;align=right;spacingLeft=3;points=[[0,0],[0.5,0],[1,0],[0,0.5],[1,0.5],[0,1],[0.5,1],[1,1]];" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Журнал событий&lt;/font&gt;" vertex="1">
+          <mxGeometry height="55" width="166" x="3645" y="630.5" as="geometry" />
+        </mxCell>
+        <mxCell id="6Mh2_Y-RtLDqBvOx-S_i-2" parent="lfhS4eNURWnVR5gMlrJm-868" style="html=1;dashed=0;whiteSpace=wrap;shape=mxgraph.dfd.dataStoreID;align=right;spacingLeft=3;points=[[0,0],[0.5,0],[1,0],[0,0.5],[1,0.5],[0,1],[0.5,1],[1,1]];" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Файл&lt;/font&gt;" vertex="1">
+          <mxGeometry height="55" width="120" x="3705" y="475" as="geometry" />
+        </mxCell>
+        <mxCell id="6Mh2_Y-RtLDqBvOx-S_i-5" edge="1" parent="lfhS4eNURWnVR5gMlrJm-868" source="6Mh2_Y-RtLDqBvOx-S_i-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;defaultLabelBackgroundColor=page;" target="6Mh2_Y-RtLDqBvOx-S_i-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <UserObject label="Сохранение на диск" mermaidId="n:P_Log" mermaidBaseStyle="ellipse;html=1;aspect=fixed;strokeWidth=2;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#28253D;fontColor=#28253D;fontFamily=Recursive;fontSize=14;shadow=1;shadowColor=#000000;shadowOffsetX=4;shadowOffsetY=4;shadowBlur=0;shadowOpacity=6;" mermaidBaseValue="Фиксация транзакции в журнале" id="6Mh2_Y-RtLDqBvOx-S_i-3">
+          <mxCell parent="lfhS4eNURWnVR5gMlrJm-868" style="ellipse;html=1;aspect=fixed;strokeWidth=2;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#28253D;fontColor=#28253D;fontFamily=Recursive;fontSize=14;shadow=1;shadowColor=#000000;shadowOffsetX=4;shadowOffsetY=4;shadowBlur=0;shadowOpacity=6;labelWidth=120;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DRecursive;" vertex="1">
+            <mxGeometry height="184" width="184" x="3470" y="410.5" as="geometry" />
+          </mxCell>
+        </UserObject>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
