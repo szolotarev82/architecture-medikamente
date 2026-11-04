@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net">
   <diagram name="Page-1" id="DnMyvNmV1fL-WepxgEsN">
-    <mxGraphModel dx="1661" dy="920" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1449" dy="802" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -14,14 +14,9 @@
             <mxGeometry height="67" width="152" x="740" y="89" as="geometry" />
           </mxCell>
         </UserObject>
-        <UserObject label="Складские операции" mermaidId="n:P_All" mermaidBaseStyle="ellipse;html=1;aspect=fixed;strokeWidth=2;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#28253D;fontColor=#28253D;fontFamily=Recursive;fontSize=14;shadow=1;shadowColor=#000000;shadowOffsetX=4;shadowOffsetY=4;shadowBlur=0;shadowOpacity=6;" mermaidBaseValue="Складские операции" id="ZqhJ7PGwznrKuXHnF7Dt-73">
+        <UserObject label="1C: Торговля и склад" mermaidId="n:P_All" mermaidBaseStyle="ellipse;html=1;aspect=fixed;strokeWidth=2;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#28253D;fontColor=#28253D;fontFamily=Recursive;fontSize=14;shadow=1;shadowColor=#000000;shadowOffsetX=4;shadowOffsetY=4;shadowBlur=0;shadowOpacity=6;" mermaidBaseValue="Складские операции" id="ZqhJ7PGwznrKuXHnF7Dt-73">
           <mxCell parent="ZqhJ7PGwznrKuXHnF7Dt-71" style="ellipse;html=1;aspect=fixed;strokeWidth=2;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#28253D;fontColor=#28253D;fontFamily=Recursive;fontSize=14;shadow=1;shadowColor=#000000;shadowOffsetX=4;shadowOffsetY=4;shadowBlur=0;shadowOpacity=6;labelWidth=120;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DRecursive;" vertex="1">
             <mxGeometry height="184" width="184" x="1220" y="30.5" as="geometry" />
-          </mxCell>
-        </UserObject>
-        <UserObject label="==1C: Торговля и склад==&#xa;(файл .1CD на FileServer)" mermaidId="n:DS_1C" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=2;fillColor=#ffffff;strokeColor=#28253D;fontColor=#28253D;fontFamily=Recursive;fontSize=14;shadow=1;shadowColor=#000000;shadowOffsetX=4;shadowOffsetY=4;shadowBlur=0;shadowOpacity=6;" mermaidBaseValue="==1C: Торговля и склад==&#xa;(файл .1CD на FileServer)" id="ZqhJ7PGwznrKuXHnF7Dt-74">
-          <mxCell parent="ZqhJ7PGwznrKuXHnF7Dt-71" style="html=1;whiteSpace=wrap;strokeWidth=2;fillColor=#ffffff;strokeColor=#28253D;fontColor=#28253D;fontFamily=Recursive;fontSize=14;shadow=1;shadowColor=#000000;shadowOffsetX=4;shadowOffsetY=4;shadowBlur=0;shadowOpacity=6;labelWidth=120;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DRecursive;" vertex="1">
-            <mxGeometry height="108" width="152" x="1730" y="68.5" as="geometry" />
           </mxCell>
         </UserObject>
         <UserObject label="Вводит приход/расход/инвентаризацию" mermaidId="e:WK-&gt;P_All#0" mermaidBaseStyle="edgeStyle=orthogonalEdgeStyle;rounded=1;curved=0;startArrow=none;endArrow=block;endSize=8;jumpStyle=arc;jumpSize=12;strokeColor=#000000;html=1;fontSize=16;labelBackgroundColor=#cccccc;fontFamily=Recursive;fontColor=#28253D;exitX=1;exitY=0.49;entryX=0;entryY=0.5;strokeWidth=2;targetPerimeterSpacing=4;" mermaidBaseValue="Вводит приход/расход/инвентаризацию" id="ZqhJ7PGwznrKuXHnF7Dt-75">
@@ -32,17 +27,15 @@
           </mxCell>
         </UserObject>
         <UserObject label="Записывает остатки и документы" mermaidId="e:P_All-&gt;DS_1C#0" mermaidBaseStyle="edgeStyle=orthogonalEdgeStyle;rounded=1;curved=0;startArrow=none;endArrow=block;endSize=8;jumpStyle=arc;jumpSize=12;strokeColor=#000000;html=1;fontSize=16;labelBackgroundColor=#cccccc;fontFamily=Recursive;fontColor=#28253D;exitX=1;exitY=0.5;entryX=0;entryY=0.5;strokeWidth=2;targetPerimeterSpacing=4;" mermaidBaseValue="Записывает остатки и документы" id="ZqhJ7PGwznrKuXHnF7Dt-76">
-          <mxCell edge="1" parent="ZqhJ7PGwznrKuXHnF7Dt-71" source="ZqhJ7PGwznrKuXHnF7Dt-73" style="edgeStyle=orthogonalEdgeStyle;rounded=1;curved=0;startArrow=none;endArrow=block;endSize=8;jumpStyle=arc;jumpSize=12;strokeColor=#000000;html=1;fontSize=14;labelBackgroundColor=#cccccc;fontFamily=Recursive;fontColor=#28253D;exitX=1;exitY=0.5;entryX=0;entryY=0.5;strokeWidth=2;targetPerimeterSpacing=4;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DRecursive;" target="ZqhJ7PGwznrKuXHnF7Dt-74">
+          <mxCell edge="1" parent="ZqhJ7PGwznrKuXHnF7Dt-71" source="ZqhJ7PGwznrKuXHnF7Dt-73" style="edgeStyle=orthogonalEdgeStyle;rounded=1;curved=0;startArrow=none;endArrow=block;endSize=8;jumpStyle=arc;jumpSize=12;strokeColor=#000000;html=1;fontSize=14;labelBackgroundColor=#cccccc;fontFamily=Recursive;fontColor=#28253D;exitX=1;exitY=0.5;entryX=0;entryY=0.5;strokeWidth=2;targetPerimeterSpacing=4;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DRecursive;">
             <mxGeometry relative="1" as="geometry">
               <Array as="points" />
+              <mxPoint x="1730" y="122.5" as="targetPoint" />
             </mxGeometry>
           </mxCell>
         </UserObject>
         <mxCell id="ZqhJ7PGwznrKuXHnF7Dt-77" parent="1" style="html=1;dashed=0;whiteSpace=wrap;shape=mxgraph.dfd.dataStoreID;align=right;spacingLeft=3;points=[[0,0],[0.5,0],[1,0],[0,0.5],[1,0.5],[0,1],[0.5,1],[1,1]];" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;База данных (файлы)&lt;/font&gt;" vertex="1">
-          <mxGeometry height="55" width="184" x="1960" y="95" as="geometry" />
-        </mxCell>
-        <mxCell id="ZqhJ7PGwznrKuXHnF7Dt-79" edge="1" parent="1" source="ZqhJ7PGwznrKuXHnF7Dt-74" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;defaultLabelBackgroundColor=page;" target="ZqhJ7PGwznrKuXHnF7Dt-77">
-          <mxGeometry relative="1" as="geometry" />
+          <mxGeometry height="55" width="184" x="1732" y="95" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
