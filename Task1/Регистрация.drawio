@@ -1,0 +1,177 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Page-1" id="DnMyvNmV1fL-WepxgEsN">
+    <mxGraphModel dx="1362" dy="754" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <UserObject label="" mermaidData="{&#xa;  &quot;data&quot;: &quot;graph LR\n    Patient[Пациент]\n    Admin[Администратор]\n    D1[Принтер]\n\n    P_Handover((Передача документов))\n    P_Input((Ввод, сканирование, шифрование))\n    P_Print((Формирование задания на печать))\n    P_IssueTicket((Выдача талона под подпись))\n    P_Log((Фиксация события в журнале))\n\n    S1[Сетевая папка]\n    S2[Реестр ID]\n    S3[Журнал событий]\n    S_Consent[Папка «Согласия»]\n\n    Patient --&gt;|Пришёл на регистрацию| P_Handover\n    P_Handover --&gt;|Документы| Admin\n    Admin --&gt;|Запуск ввода| P_Input\n    P_Input --&gt;|Зашифрованный файл| P_Log\n    P_Log --&gt;|Запись в журнал| S3\n    P_Input --&gt;|Файл| S1\n    P_Input --&gt;|Обезличенная карточка| S2\n    P_Input --&gt;|Скан согласия| S_Consent\n    P_Input --&gt;|Данные для печати| P_Print\n    P_Print --&gt;|Задание на печать| D1\n    D1 --&gt;|Талон| P_IssueTicket\n    P_IssueTicket --&gt;|Выдача под подпись| Patient\n&quot;,&#xa;  &quot;config&quot;: null,&#xa;  &quot;version&quot;: &quot;12&quot;&#xa;}" id="lfhS4eNURWnVR5gMlrJm-769">
+          <mxCell connectable="0" parent="1" style="group;transparentBounds=1;editIcon=1;lockedGroup=0;groupPadding=10;" vertex="1">
+            <mxGeometry as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Пациент" mermaidId="n:Patient" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=2;fillColor=#ffffff;strokeColor=#28253D;fontColor=#28253D;fontFamily=Recursive;fontSize=14;shadow=1;shadowColor=#000000;shadowOffsetX=4;shadowOffsetY=4;shadowBlur=0;shadowOpacity=6;" mermaidBaseValue="Пациент" id="lfhS4eNURWnVR5gMlrJm-770">
+          <mxCell parent="lfhS4eNURWnVR5gMlrJm-769" style="html=1;whiteSpace=wrap;strokeWidth=2;fillColor=#ffffff;strokeColor=#28253D;fontColor=#28253D;fontFamily=Recursive;fontSize=14;shadow=1;shadowColor=#000000;shadowOffsetX=4;shadowOffsetY=4;shadowBlur=0;shadowOpacity=6;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DRecursive;rounded=0;" vertex="1">
+            <mxGeometry height="45" width="152" x="840" y="786" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Администратор" mermaidId="n:Admin" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=2;fillColor=#ffffff;strokeColor=#28253D;fontColor=#28253D;fontFamily=Recursive;fontSize=14;shadow=1;shadowColor=#000000;shadowOffsetX=4;shadowOffsetY=4;shadowBlur=0;shadowOpacity=6;" mermaidBaseValue="Администратор" id="lfhS4eNURWnVR5gMlrJm-771">
+          <mxCell parent="lfhS4eNURWnVR5gMlrJm-769" style="html=1;whiteSpace=wrap;strokeWidth=2;fillColor=#ffffff;strokeColor=#28253D;fontColor=#28253D;fontFamily=Recursive;fontSize=14;shadow=1;shadowColor=#000000;shadowOffsetX=4;shadowOffsetY=4;shadowBlur=0;shadowOpacity=6;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DRecursive;rounded=0;" vertex="1">
+            <mxGeometry height="45" width="152" x="1597" y="599" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Принтер" mermaidId="n:D1" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=2;fillColor=#ffffff;strokeColor=#28253D;fontColor=#28253D;fontFamily=Recursive;fontSize=14;shadow=1;shadowColor=#000000;shadowOffsetX=4;shadowOffsetY=4;shadowBlur=0;shadowOpacity=6;" mermaidBaseValue="Принтер" id="lfhS4eNURWnVR5gMlrJm-772">
+          <mxCell parent="lfhS4eNURWnVR5gMlrJm-769" style="html=1;whiteSpace=wrap;strokeWidth=2;fillColor=#ffffff;strokeColor=#28253D;fontColor=#28253D;fontFamily=Recursive;fontSize=14;shadow=1;shadowColor=#000000;shadowOffsetX=4;shadowOffsetY=4;shadowBlur=0;shadowOpacity=6;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DRecursive;" vertex="1">
+            <mxGeometry height="45" width="152" x="2777" y="860" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Передача документов" mermaidId="n:P_Handover" mermaidBaseStyle="ellipse;html=1;aspect=fixed;strokeWidth=2;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#28253D;fontColor=#28253D;fontFamily=Recursive;fontSize=14;shadow=1;shadowColor=#000000;shadowOffsetX=4;shadowOffsetY=4;shadowBlur=0;shadowOpacity=6;" mermaidBaseValue="Передача документов" id="lfhS4eNURWnVR5gMlrJm-773">
+          <mxCell parent="lfhS4eNURWnVR5gMlrJm-769" style="ellipse;html=1;aspect=fixed;strokeWidth=2;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#28253D;fontColor=#28253D;fontFamily=Recursive;fontSize=14;shadow=1;shadowColor=#000000;shadowOffsetX=4;shadowOffsetY=4;shadowBlur=0;shadowOpacity=6;labelWidth=120;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DRecursive;" vertex="1">
+            <mxGeometry height="184" width="184" x="1251" y="530" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Ввод, сканирование, шифрование" mermaidId="n:P_Input" mermaidBaseStyle="ellipse;html=1;aspect=fixed;strokeWidth=2;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#28253D;fontColor=#28253D;fontFamily=Recursive;fontSize=14;shadow=1;shadowColor=#000000;shadowOffsetX=4;shadowOffsetY=4;shadowBlur=0;shadowOpacity=6;" mermaidBaseValue="Ввод, сканирование, шифрование" id="lfhS4eNURWnVR5gMlrJm-774">
+          <mxCell parent="lfhS4eNURWnVR5gMlrJm-769" style="ellipse;html=1;aspect=fixed;strokeWidth=2;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#28253D;fontColor=#28253D;fontFamily=Recursive;fontSize=14;shadow=1;shadowColor=#000000;shadowOffsetX=4;shadowOffsetY=4;shadowBlur=0;shadowOpacity=6;labelWidth=120;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DRecursive;" vertex="1">
+            <mxGeometry height="184" width="184" x="1923" y="530" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Печать договора" mermaidId="n:P_Print" mermaidBaseStyle="ellipse;html=1;aspect=fixed;strokeWidth=2;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#28253D;fontColor=#28253D;fontFamily=Recursive;fontSize=14;shadow=1;shadowColor=#000000;shadowOffsetX=4;shadowOffsetY=4;shadowBlur=0;shadowOpacity=6;" mermaidBaseValue="Формирование задания на печать" id="lfhS4eNURWnVR5gMlrJm-775">
+          <mxCell parent="lfhS4eNURWnVR5gMlrJm-769" style="ellipse;html=1;aspect=fixed;strokeWidth=2;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#28253D;fontColor=#28253D;fontFamily=Recursive;fontSize=14;shadow=1;shadowColor=#000000;shadowOffsetX=4;shadowOffsetY=4;shadowBlur=0;shadowOpacity=6;labelWidth=120;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DRecursive;" vertex="1">
+            <mxGeometry height="184" width="184" x="2379" y="791" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Подпись договора" mermaidId="n:P_IssueTicket" mermaidBaseStyle="ellipse;html=1;aspect=fixed;strokeWidth=2;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#28253D;fontColor=#28253D;fontFamily=Recursive;fontSize=14;shadow=1;shadowColor=#000000;shadowOffsetX=4;shadowOffsetY=4;shadowBlur=0;shadowOpacity=6;" mermaidBaseValue="Выдача талона под подпись" id="lfhS4eNURWnVR5gMlrJm-776">
+          <mxCell parent="lfhS4eNURWnVR5gMlrJm-769" style="ellipse;html=1;aspect=fixed;strokeWidth=2;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#28253D;fontColor=#28253D;fontFamily=Recursive;fontSize=14;shadow=1;shadowColor=#000000;shadowOffsetX=4;shadowOffsetY=4;shadowBlur=0;shadowOpacity=6;labelWidth=120;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DRecursive;" vertex="1">
+            <mxGeometry height="184" width="184" x="3052" y="847" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Фиксация события в журнале" mermaidId="n:P_Log" mermaidBaseStyle="ellipse;html=1;aspect=fixed;strokeWidth=2;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#28253D;fontColor=#28253D;fontFamily=Recursive;fontSize=14;shadow=1;shadowColor=#000000;shadowOffsetX=4;shadowOffsetY=4;shadowBlur=0;shadowOpacity=6;" mermaidBaseValue="Фиксация события в журнале" id="lfhS4eNURWnVR5gMlrJm-777">
+          <mxCell parent="lfhS4eNURWnVR5gMlrJm-769" style="ellipse;html=1;aspect=fixed;strokeWidth=2;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#28253D;fontColor=#28253D;fontFamily=Recursive;fontSize=14;shadow=1;shadowColor=#000000;shadowOffsetX=4;shadowOffsetY=4;shadowBlur=0;shadowOpacity=6;labelWidth=120;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DRecursive;" vertex="1">
+            <mxGeometry height="184" width="184" x="2379" y="290" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Пришёл на регистрацию" mermaidId="e:Patient-&gt;P_Handover#0" mermaidBaseStyle="edgeStyle=orthogonalEdgeStyle;rounded=1;curved=0;startArrow=none;endArrow=block;endSize=8;jumpStyle=arc;jumpSize=12;strokeColor=#000000;html=1;fontSize=16;labelBackgroundColor=#cccccc;fontFamily=Recursive;fontColor=#28253D;exitX=1;exitY=0.41;entryX=0;entryY=0.5;strokeWidth=2;targetPerimeterSpacing=4;" mermaidBaseValue="Пришёл на регистрацию" id="lfhS4eNURWnVR5gMlrJm-782">
+          <mxCell edge="1" parent="lfhS4eNURWnVR5gMlrJm-769" source="lfhS4eNURWnVR5gMlrJm-770" style="edgeStyle=orthogonalEdgeStyle;rounded=1;curved=0;startArrow=none;endArrow=block;endSize=8;jumpStyle=arc;jumpSize=12;strokeColor=#000000;html=1;fontSize=14;labelBackgroundColor=#cccccc;fontFamily=Recursive;fontColor=#28253D;exitX=1;exitY=0.41;entryX=0;entryY=0.5;strokeWidth=2;targetPerimeterSpacing=4;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DRecursive;" target="lfhS4eNURWnVR5gMlrJm-773">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points">
+                <mxPoint x="1012" y="804" />
+                <mxPoint x="1012" y="622" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="Документы" mermaidId="e:P_Handover-&gt;Admin#0" mermaidBaseStyle="edgeStyle=orthogonalEdgeStyle;rounded=1;curved=0;startArrow=none;endArrow=block;endSize=8;jumpStyle=arc;jumpSize=12;strokeColor=#000000;html=1;fontSize=16;labelBackgroundColor=#cccccc;fontFamily=Recursive;fontColor=#28253D;exitX=1;exitY=0.5;entryX=0;entryY=0.51;strokeWidth=2;targetPerimeterSpacing=4;" mermaidBaseValue="Документы" id="lfhS4eNURWnVR5gMlrJm-783">
+          <mxCell edge="1" parent="lfhS4eNURWnVR5gMlrJm-769" source="lfhS4eNURWnVR5gMlrJm-773" style="edgeStyle=orthogonalEdgeStyle;rounded=1;curved=0;startArrow=none;endArrow=block;endSize=8;jumpStyle=arc;jumpSize=12;strokeColor=#000000;html=1;fontSize=14;labelBackgroundColor=#cccccc;fontFamily=Recursive;fontColor=#28253D;exitX=1;exitY=0.5;entryX=0;entryY=0.51;strokeWidth=2;targetPerimeterSpacing=4;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DRecursive;" target="lfhS4eNURWnVR5gMlrJm-771">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="Запуск ввода" mermaidId="e:Admin-&gt;P_Input#0" mermaidBaseStyle="edgeStyle=orthogonalEdgeStyle;rounded=1;curved=0;startArrow=none;endArrow=block;endSize=8;jumpStyle=arc;jumpSize=12;strokeColor=#000000;html=1;fontSize=16;labelBackgroundColor=#cccccc;fontFamily=Recursive;fontColor=#28253D;exitX=1;exitY=0.51;entryX=0;entryY=0.5;strokeWidth=2;targetPerimeterSpacing=4;" mermaidBaseValue="Запуск ввода" id="lfhS4eNURWnVR5gMlrJm-784">
+          <mxCell edge="1" parent="lfhS4eNURWnVR5gMlrJm-769" source="lfhS4eNURWnVR5gMlrJm-771" style="edgeStyle=orthogonalEdgeStyle;rounded=1;curved=0;startArrow=none;endArrow=block;endSize=8;jumpStyle=arc;jumpSize=12;strokeColor=#000000;html=1;fontSize=14;labelBackgroundColor=#cccccc;fontFamily=Recursive;fontColor=#28253D;exitX=1;exitY=0.51;entryX=0;entryY=0.5;strokeWidth=2;targetPerimeterSpacing=4;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DRecursive;" target="lfhS4eNURWnVR5gMlrJm-774">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" mermaidId="e:P_Input-&gt;P_Log#0" mermaidBaseStyle="edgeStyle=orthogonalEdgeStyle;rounded=1;curved=0;startArrow=none;endArrow=block;endSize=8;jumpStyle=arc;jumpSize=12;strokeColor=#000000;html=1;fontSize=16;labelBackgroundColor=#cccccc;fontFamily=Recursive;fontColor=#28253D;exitX=1;exitY=0.2;entryX=0;entryY=0.5;strokeWidth=2;targetPerimeterSpacing=4;" mermaidBaseValue="Зашифрованный файл" id="lfhS4eNURWnVR5gMlrJm-785">
+          <mxCell edge="1" parent="lfhS4eNURWnVR5gMlrJm-769" source="lfhS4eNURWnVR5gMlrJm-774" style="edgeStyle=orthogonalEdgeStyle;rounded=1;curved=0;startArrow=none;endArrow=block;endSize=8;jumpStyle=arc;jumpSize=12;strokeColor=#000000;html=1;fontSize=14;labelBackgroundColor=#cccccc;fontFamily=Recursive;fontColor=#28253D;exitX=1;exitY=0.2;entryX=0;entryY=0.5;strokeWidth=2;targetPerimeterSpacing=4;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DRecursive;" target="lfhS4eNURWnVR5gMlrJm-777">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points">
+                <mxPoint x="2127" y="567" />
+                <mxPoint x="2127" y="382" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="Запись в журнал" mermaidId="e:P_Log-&gt;S3#0" mermaidBaseStyle="edgeStyle=orthogonalEdgeStyle;rounded=1;curved=0;startArrow=none;endArrow=block;endSize=8;jumpStyle=arc;jumpSize=12;strokeColor=#000000;html=1;fontSize=16;labelBackgroundColor=#cccccc;fontFamily=Recursive;fontColor=#28253D;exitX=1;exitY=0.5;entryX=0;entryY=0.49;strokeWidth=2;targetPerimeterSpacing=4;" mermaidBaseValue="Запись в журнал" id="lfhS4eNURWnVR5gMlrJm-786">
+          <mxCell edge="1" parent="lfhS4eNURWnVR5gMlrJm-769" source="lfhS4eNURWnVR5gMlrJm-777" style="edgeStyle=orthogonalEdgeStyle;rounded=1;curved=0;startArrow=none;endArrow=block;endSize=8;jumpStyle=arc;jumpSize=12;strokeColor=#000000;html=1;fontSize=14;labelBackgroundColor=#cccccc;fontFamily=Recursive;fontColor=#28253D;exitX=1;exitY=0.5;entryX=0;entryY=0.49;strokeWidth=2;targetPerimeterSpacing=4;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DRecursive;">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points" />
+              <mxPoint x="2777" y="381.8299999999999" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="Сканы согласия и ПДн" mermaidId="e:P_Input-&gt;S1#0" mermaidBaseStyle="edgeStyle=orthogonalEdgeStyle;rounded=1;curved=0;startArrow=none;endArrow=block;endSize=8;jumpStyle=arc;jumpSize=12;strokeColor=#000000;html=1;fontSize=16;labelBackgroundColor=#cccccc;fontFamily=Recursive;fontColor=#28253D;exitX=1;exitY=0.35;entryX=0;entryY=0.5;strokeWidth=2;targetPerimeterSpacing=4;" mermaidBaseValue="Файл" id="lfhS4eNURWnVR5gMlrJm-787">
+          <mxCell edge="1" parent="lfhS4eNURWnVR5gMlrJm-769" source="lfhS4eNURWnVR5gMlrJm-774" style="edgeStyle=orthogonalEdgeStyle;rounded=1;curved=0;startArrow=none;endArrow=block;endSize=8;jumpStyle=arc;jumpSize=12;strokeColor=#000000;html=1;fontSize=14;labelBackgroundColor=#cccccc;fontFamily=Recursive;fontColor=#28253D;exitX=1;exitY=0.35;entryX=0;entryY=0.5;strokeWidth=2;targetPerimeterSpacing=4;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DRecursive;entryDx=0;entryDy=0;" target="gTEa3dOLT6NIOWkHeM7L-2">
+            <mxGeometry relative="1" x="-0.0511" as="geometry">
+              <mxPoint as="offset" />
+              <Array as="points">
+                <mxPoint x="2103.3" y="595" />
+                <mxPoint x="2147" y="595" />
+                <mxPoint x="2147" y="621.5" />
+              </Array>
+              <mxPoint x="2379" y="536.5" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="Данные для печати" mermaidId="e:P_Input-&gt;P_Print#0" mermaidBaseStyle="edgeStyle=orthogonalEdgeStyle;rounded=1;curved=0;startArrow=none;endArrow=block;endSize=8;jumpStyle=arc;jumpSize=12;strokeColor=#000000;html=1;fontSize=16;labelBackgroundColor=#cccccc;fontFamily=Recursive;fontColor=#28253D;exitX=1;exitY=0.8;entryX=0;entryY=0.5;strokeWidth=2;targetPerimeterSpacing=4;" mermaidBaseValue="Данные для печати" id="lfhS4eNURWnVR5gMlrJm-790">
+          <mxCell edge="1" parent="lfhS4eNURWnVR5gMlrJm-769" source="lfhS4eNURWnVR5gMlrJm-774" style="edgeStyle=orthogonalEdgeStyle;rounded=1;curved=0;startArrow=none;endArrow=block;endSize=8;jumpStyle=arc;jumpSize=12;strokeColor=#000000;html=1;fontSize=14;labelBackgroundColor=#cccccc;fontFamily=Recursive;fontColor=#28253D;exitX=1;exitY=0.8;entryX=0;entryY=0.5;strokeWidth=2;targetPerimeterSpacing=4;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DRecursive;" target="lfhS4eNURWnVR5gMlrJm-775">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points">
+                <mxPoint x="2127" y="677" />
+                <mxPoint x="2127" y="883" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="Задание на печать" mermaidId="e:P_Print-&gt;D1#0" mermaidBaseStyle="edgeStyle=orthogonalEdgeStyle;rounded=1;curved=0;startArrow=none;endArrow=block;endSize=8;jumpStyle=arc;jumpSize=12;strokeColor=#000000;html=1;fontSize=16;labelBackgroundColor=#cccccc;fontFamily=Recursive;fontColor=#28253D;exitX=1;exitY=0.5;entryX=0;entryY=0.51;strokeWidth=2;targetPerimeterSpacing=4;" mermaidBaseValue="Задание на печать" id="lfhS4eNURWnVR5gMlrJm-791">
+          <mxCell edge="1" parent="lfhS4eNURWnVR5gMlrJm-769" source="lfhS4eNURWnVR5gMlrJm-775" style="edgeStyle=orthogonalEdgeStyle;rounded=1;curved=0;startArrow=none;endArrow=block;endSize=8;jumpStyle=arc;jumpSize=12;strokeColor=#000000;html=1;fontSize=14;labelBackgroundColor=#cccccc;fontFamily=Recursive;fontColor=#28253D;exitX=1;exitY=0.5;entryX=0;entryY=0.51;strokeWidth=2;targetPerimeterSpacing=4;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DRecursive;" target="lfhS4eNURWnVR5gMlrJm-772">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="Договор" mermaidId="e:D1-&gt;P_IssueTicket#0" mermaidBaseStyle="edgeStyle=orthogonalEdgeStyle;rounded=1;curved=0;startArrow=none;endArrow=block;endSize=8;jumpStyle=arc;jumpSize=12;strokeColor=#000000;html=1;fontSize=16;labelBackgroundColor=#cccccc;fontFamily=Recursive;fontColor=#28253D;exitX=1;exitY=0.51;entryX=0;entryY=0.35;strokeWidth=2;targetPerimeterSpacing=4;" mermaidBaseValue="Талон" id="lfhS4eNURWnVR5gMlrJm-792">
+          <mxCell edge="1" parent="lfhS4eNURWnVR5gMlrJm-769" source="lfhS4eNURWnVR5gMlrJm-772" style="edgeStyle=orthogonalEdgeStyle;rounded=1;curved=0;startArrow=none;endArrow=block;endSize=8;jumpStyle=arc;jumpSize=12;strokeColor=#000000;html=1;fontSize=14;labelBackgroundColor=#cccccc;fontFamily=Recursive;fontColor=#28253D;exitX=1;exitY=0.51;entryX=0;entryY=0.35;strokeWidth=2;targetPerimeterSpacing=4;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DRecursive;" target="lfhS4eNURWnVR5gMlrJm-776">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points">
+                <mxPoint x="3032" y="883" />
+                <mxPoint x="3032" y="912" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="Выдача договора" mermaidId="e:P_IssueTicket-&gt;Patient#0" mermaidBaseStyle="edgeStyle=orthogonalEdgeStyle;rounded=1;curved=0;startArrow=none;endArrow=block;endSize=8;jumpStyle=arc;jumpSize=12;strokeColor=#000000;html=1;fontSize=16;labelBackgroundColor=#cccccc;fontFamily=Recursive;fontColor=#28253D;exitX=0;exitY=0.65;entryX=1;entryY=0.59;strokeWidth=2;targetPerimeterSpacing=4;" mermaidBaseValue="Выдача под подпись" id="lfhS4eNURWnVR5gMlrJm-793">
+          <mxCell edge="1" parent="lfhS4eNURWnVR5gMlrJm-769" source="lfhS4eNURWnVR5gMlrJm-776" style="edgeStyle=orthogonalEdgeStyle;rounded=1;curved=0;startArrow=none;endArrow=block;endSize=8;jumpStyle=arc;jumpSize=12;strokeColor=#000000;html=1;fontSize=14;labelBackgroundColor=#cccccc;fontFamily=Recursive;fontColor=#28253D;exitX=0;exitY=0.65;entryX=1;entryY=0.59;strokeWidth=2;targetPerimeterSpacing=4;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DRecursive;" target="lfhS4eNURWnVR5gMlrJm-770">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points">
+                <mxPoint x="3032" y="966" />
+                <mxPoint x="3032" y="995" />
+                <mxPoint x="2991" y="995" />
+                <mxPoint x="2853" y="995" />
+                <mxPoint x="2670" y="995" />
+                <mxPoint x="2471" y="995" />
+                <mxPoint x="2253" y="995" />
+                <mxPoint x="1836" y="995" />
+                <mxPoint x="1673" y="995" />
+                <mxPoint x="1516" y="995" />
+                <mxPoint x="1343" y="995" />
+                <mxPoint x="1122" y="995" />
+                <mxPoint x="1012" y="995" />
+                <mxPoint x="1012" y="813" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <mxCell id="gTEa3dOLT6NIOWkHeM7L-1" parent="lfhS4eNURWnVR5gMlrJm-769" style="html=1;dashed=0;whiteSpace=wrap;shape=mxgraph.dfd.dataStoreID;align=right;spacingLeft=3;points=[[0,0],[0.5,0],[1,0],[0,0.5],[1,0.5],[0,1],[0.5,1],[1,1]];" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Журнал событий&lt;/font&gt;" vertex="1">
+          <mxGeometry height="55" width="166" x="2777" y="354.5" as="geometry" />
+        </mxCell>
+        <mxCell id="gTEa3dOLT6NIOWkHeM7L-2" parent="lfhS4eNURWnVR5gMlrJm-769" style="html=1;dashed=0;whiteSpace=wrap;shape=mxgraph.dfd.dataStoreID;align=right;spacingLeft=3;points=[[0,0],[0.5,0],[1,0],[0,0.5],[1,0.5],[0,1],[0.5,1],[1,1]];" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Сетевая папка&lt;/font&gt;" vertex="1">
+          <mxGeometry height="55" width="141" x="2422" y="594" as="geometry" />
+        </mxCell>
+        <mxCell id="gTEa3dOLT6NIOWkHeM7L-4" parent="lfhS4eNURWnVR5gMlrJm-769" style="html=1;dashed=0;whiteSpace=wrap;shape=mxgraph.dfd.dataStoreID;align=right;spacingLeft=3;points=[[0,0],[0.5,0],[1,0],[0,0.5],[1,0.5],[0,1],[0.5,1],[1,1]];" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Хранилище документов&lt;/font&gt;" vertex="1">
+          <mxGeometry height="55" width="220" x="3060" y="680" as="geometry" />
+        </mxCell>
+        <UserObject label="Договор" mermaidId="e:P_Print-&gt;D1#0" mermaidBaseStyle="edgeStyle=orthogonalEdgeStyle;rounded=1;curved=0;startArrow=none;endArrow=block;endSize=8;jumpStyle=arc;jumpSize=12;strokeColor=#000000;html=1;fontSize=16;labelBackgroundColor=#cccccc;fontFamily=Recursive;fontColor=#28253D;exitX=1;exitY=0.5;entryX=0;entryY=0.51;strokeWidth=2;targetPerimeterSpacing=4;" mermaidBaseValue="Задание на печать" id="gTEa3dOLT6NIOWkHeM7L-6">
+          <mxCell edge="1" parent="lfhS4eNURWnVR5gMlrJm-769" style="edgeStyle=orthogonalEdgeStyle;rounded=1;curved=0;startArrow=none;endArrow=block;endSize=8;jumpStyle=arc;jumpSize=12;strokeColor=#000000;html=1;fontSize=14;labelBackgroundColor=#cccccc;fontFamily=Recursive;fontColor=#28253D;exitX=1;exitY=0.5;strokeWidth=2;targetPerimeterSpacing=4;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DRecursive;">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points" />
+              <mxPoint x="3140" y="847" as="sourcePoint" />
+              <mxPoint x="3140" y="740" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
